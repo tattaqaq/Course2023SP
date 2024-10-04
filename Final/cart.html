@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My Cart</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./cart.html">My Cart</a></li>
+                <li><a href="./admin.html">Admin</a></li> 
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="shopping-cart">
+            <h1>Shopping Cart</h1>
+            <div class="cart-item">
+                <img src="Gold.jpg" alt="Selected Membership" width="250">
+                <h3>Gold Membership</h3>
+                <p>Price: $75</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <button onclick="updateQuantity()">Update</button>
+                <button onclick="removeFromCart()">Remove</button>
+                <p id="total"></p>
+            </div>
+
+            <div class="cart-item">
+                <img src="Bronze.jpg" alt="Selected Membership" width="250">
+                <h3>Gold Membership</h3>
+                <p>Price: $20</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantitybr" name="quantitybr" min="1" value="1">
+                <button onclick="updateQuantity()">Update</button>
+                <button onclick="removeFromCart()">Remove</button>
+                <p id="totalbr"></p>
+            </div>
+
+            <h2>Click Update show Your Total</h2>
+            <h3 id="cart-total"></h3>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+
+        <script>
+            function updateQuantity() {
+                var quantityInput = document.getElementById('quantity');
+                var totalElement = document.getElementById('total');
+                var cartTotalElement = document.getElementById('cart-total');
+                var quantityInputbr = document.getElementById('quantitybr');
+                var totalElementbr = document.getElementById('totalbr');
+
+                var quantity = parseInt(quantityInput.value);
+                var quantitybr = parseInt(quantityInputbr.value);
+                var itemPrice = 75;
+                var itemPricebr = 20;
+                var taxRate = 0.0825;
+                var shippingFee = 10;
+
+                var itemTotal = (itemPrice * quantity);
+                totalElement.textContent = 'Total: $' + itemTotal;
+                var itemTotalbr = (itemPricebr * quantitybr);
+                totalElementbr.textContent = 'Total: $' + itemTotalbr;
+
+                var checkoutTotal = itemPrice * quantity + itemPricebr * quantitybr
+                var tax = checkoutTotal * taxRate;
+                var totalAmount = checkoutTotal + tax + shippingFee;
+
+                cartTotalElement.textContent = 'Cart Total: $' + totalAmount + ' (Tax: $' + tax + ', Flat Fee: $' + shippingFee + ')';
+            }
+
+            function removeFromCart() {
+                alert('Product removed from the cart!');
+            }
+
+            function checkout() {
+                alert('Checkout completed!');
+            }
+        </script>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Bulk Upload</title>
+    <link rel="stylesheet" href="./admin.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Bulk Upload</a></li>
+                <li><a href="./Product Edit.html">Product Edit</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bulk-upload">
+        <h2>Bulk Upload</h2>
+        <p>Download Product Data: <a href="#">Download</a></p>
+        <form>
+            <label for="file">Select a file to upload:</label>
+            <input type="file" id="file" name="file" accept=".csv, .xml, .json">
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Product Edit</title>
+    <link rel="stylesheet" href="./admin.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="./Bulk Upload.html">Bulk Upload</a></li>
+                <li><a href="./Product Edit">Product Edit</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-edit">
+        <h2>Product Edit</h2>
+        <label for="product-list">Select a product to edit:</label>
+        <select id="product-list" name="product-list">
+            <option value="product1">Product 1</option>
+            <option value="product2">Product 2</option>
+        </select>
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price">
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+</body>
+</html>

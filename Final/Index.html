@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Let's Go! -- Your Cheapest Ticket Finder</title>
+    <link rel="stylesheet" href="./Style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./cart.html">My Cart</a></li>
+                <li id="admin-link" style="display: none;"><a href="./Bulk Upload.html">Admin</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="scrolling-banner">
+        <p>All your purchuse will have 15% discount when you checkout! Shop now!</p>
+    </div>
+
+    <div class="splash">
+        <h1>Hello! Welcome to "Let's Go! -- Your Cheapest Ticket Finder"</h1>
+        <p>Your one-stop destination for amazing products.</p>
+        <a href="./signup.html">Sign Up Now</a>
+    </div>
+    <hr />
+
+    <div class="login-form" id="login-form">
+        <h2>Admin Login(Username:admin, Password:1234)</h2>
+        <form onsubmit="login(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Fuzzy search, sort by preference, easy one-click travel</li>
+            <li>Countless price options, we help you find the best one.</li>
+            <li>We are not a booking platform, but rather, carriers of prices from over a hundred ticket-selling websites.</li>
+            <li>We are "Your Web App" -- Your Best Shopping Companion.</li>
+        </ul>
+    </div>
+
+    <a href="./Plane.jpg">
+        <img src="./Plane.jpg" alt="Plane">
+    </a>
+
+    <footer>
+        <p>&copy; 2023 Let's Go! -- Your Cheapest Ticket Finder. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var isAdmin = false;
+
+        function login(event) {
+            event.preventDefault();
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'admin' && password === '1234') {
+                isAdmin = true;
+                updateUI();
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+
+        function updateUI() {
+            var adminLink = document.getElementById('admin-link');
+            var loginForm = document.getElementById('login-form');
+
+            if (isAdmin) {
+                adminLink.style.display = 'block';
+                loginForm.style.display = 'none';
+            } else {
+                adminLink.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            updateUI();
+        });
+    </script>
+
+</body>
+</html>

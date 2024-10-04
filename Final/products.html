@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Products</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./cart.html">My Cart</a></li>
+                <li><a href="./admin.html">Admin</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="product-list">
+            <div class="product">
+                <img src="Bronze.jpg" alt="Bronze Membership" width="250">
+                <h3>Bronze Membership</h3>
+                <p>Activate Code for Let's Go! Basic Membership</p>
+                <p>Price: $20</p>
+                <a href="./details.html">Details</a><br />
+                <button onclick="addToCart('Bronze Membership', 20)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Silver.jpg" alt="Silver Membership" width="250">
+                <h3>Silver Membership</h3>
+                <p>Activate Code for Let's Go! Platinum Membership</p>
+                <p>Price: $40</p>
+                <a href="./details.html">Details</a><br />
+                <button onclick="addToCart('Silver Membership', 40)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Gold.jpg" alt="Gold Membership" width="250">
+                <h3>Gold Membership</h3>
+                <p>Activate Code for Let's Go! Gold Membership</p>
+                <p>Price: $75</p>
+                <a href="./details.html">Details</a><br />
+                <button onclick="addToCart('Gold Membership', 75)">Add to Cart</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function addToCart(productName, price) {
+            alert(productName + ' added to the cart successfully! Price: $' + price);
+        }
+    </script>
+</body>
+</html>

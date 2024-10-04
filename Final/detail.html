@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Details</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./cart.html">My Cart</a></li>
+                <li><a href="./admin.html">Admin</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="product-details">
+            <img src="Gold.jpg" alt="Selected Membership" width="250">
+            <h2>Gold Membership</h2>
+            <p>Activate Code for Let's Go! -- Your Cheapest Ticket Finder Gold Membership.</p>
+            <p>
+                <h3>Description:<br /></h3>
+                Ad-free browsing, with a more intuitive interface.<br />
+                Unlock hidden features of the software for a more convenient user experience.<br />
+                Enjoy additional benefits with a membership subscription, including exclusive discounted prices for members.<br />
+                Our 24/7 customer service is ready to assist, providing a premium membership experience.<br />
+            </p>
+            <p><h3>Price: $75</h3></p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <h2>People who may also like...</h2>
+        <div class="interest">
+            <img src="Bronze.jpg" alt="Bronze Membership" width="250">
+            <h3>Bronze Membership</h3>
+            <p>Activate Code for Let's Go! Basic Membership</p>
+            <p>Price: $20</p>
+        </div>
+
+        <div class="interest">
+            <img src="Silver.jpg" alt="Silver Membership" width="250">
+            <h3>Silver Membership</h3>
+            <p>Activate Code for Let's Go! Platinum Membership</p>
+            <p>Price: $40</p>
+        </div>
+
+        <script>
+            function addToCart() {
+                alert('Product added to the cart successful!');
+            }
+        </script>
+
+    </main>
+</body>
+</html>
